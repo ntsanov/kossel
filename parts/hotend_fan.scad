@@ -1,10 +1,10 @@
 include <configuration.scad>;
 
-barrel_radius = 8;
+barrel_diameter = 25;
 barrel_height = 30;
 
 groove_radius = 6;
-groove_height = 4.6;
+groove_height = 6;
 
 fan_offset = 15;
 
@@ -31,9 +31,9 @@ module hotend_fan() {
     }
     // Groove mount.
     cylinder(r=groove_radius, h=200, center=true, $fn=24);
-    // J-Head barrel.
-    translate([0, 0, groove_height + 0.02])
-      cylinder(r=barrel_radius + 1, h=100, $fn=24);
+    // V6 barrel.
+    translate([0, 0, groove_height - 0.2])
+      cylinder(d=barrel_diameter + 1, h=100, $fn=24);
     // Fan mounting surface and screws.
     translate([0, -50 - fan_offset, 0])
       cube([100, 100, 100], center=true);
