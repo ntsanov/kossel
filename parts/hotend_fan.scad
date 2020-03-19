@@ -64,8 +64,14 @@ module hotend_fan() {
 
 module frame_4010(){
     union() {
-        translate([0,35,0])
-            cube([7,5,40]);
+        difference(){
+            // back pillar
+            translate([0,35,0])
+                cube([7,5,40]);
+            // cable ties hole
+            translate([2.5,35,5])
+                cube([2,5,30]);
+        }
         translate([0,25,0])
             cube([7,2,40]); 
         translate([0,0,30])
@@ -111,7 +117,7 @@ difference(){
     ])
     translate(coords)
     rotate([0,90,0])
-    #cylinder($fn=32,d=2, h=10, center=true);
+    #cylinder($fn=32,d=1.8, h=10, center=true);
    
 }
 
