@@ -8,6 +8,8 @@ groove_height = 6;
 
 fan_offset = 15;
 
+m3_radius = 1.5;
+
 module hotend_fan() {
   difference() {
     union() {
