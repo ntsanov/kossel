@@ -11,9 +11,9 @@ union(){
     square([thck, width/2]);
     translate([thck,offset,0])
     union(){
-        square([2,thck]);
-        translate([2,0.3,0])
-        circle(d=thck+0.5);
+        square([3.2,thck]);
+        translate([2.6,0.4,0])
+        circle(d=thck);
     }
 }
 
